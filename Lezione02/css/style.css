@@ -1,0 +1,33 @@
+/* commento in css (ctrl + ù) 
+Nel css fornisco regole di stile al mio html */
+
+/* recupero attraverso il nome tag TUTTI gli elementi html h1 */
+h1 {
+    color: orange;
+}
+
+/* id identificati da #nomeId */
+#primoParag {
+    color: darkblue;
+}
+
+#secondoParag{
+    color: tomato;
+}
+
+#terzoParag{
+    color:purple;
+}
+
+/* classi identificate da .nomeClasse */
+.textYellow{
+    color:yellowgreen
+}
+
+.textRed{
+    color:crimson
+}
+
+.fontAlt{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

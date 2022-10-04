@@ -1,0 +1,70 @@
+<!-- posso scrivere l'abbreviazione ! per creare codice di partenza -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lta&gt e script esterni</title>
+    <!-- &lt e &gt permettono di scrivere '<' e '>' nel testo -->
+
+    <!-- collegamento al file css -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- path relativi -->
+    <a href="./index.html">Home</a>
+    <!-- ./ parte dalla posizione corrente -->
+    <a href="./pages/chiSiamo.html">Chi siamo</a>
+    <a href="./pages/contatti.html">Contatti</a>
+    <!-- ctrl+click sul path ancora inesistente mi permette di creare un nuovo file/cartella -->
+
+    <br>
+
+    <h1>Lezione 2</h1>
+    <p>In questa lezione impareremo ad utilizzare il tag &lta&gt e a collegare degli script esterni.</p>
+
+    <!-- path assoluto -->
+    <a href="https://generation.instructure.com/courses/1553" target="_blank" title="Generation Italy"> Link alla pagina
+        di Generation</a>
+    <!-- target="_blank" serve per far sì che il link si apra in una nuova scheda -->
+
+    <br>
+
+    <!-- inserisco immagini e link -->
+    <a href="https://it.wikipedia.org/wiki/Torino" title="Vai alla pagina wiki Torino" target="_blank">
+        <!-- path assoluto -->
+        <img src="https://images.placesonline.com/photos/torino_guida__1604937504.jpg"
+            alt="Veduta di piazza San Carlo a Torino al tramonto" width="auto" height="200px">
+        <!-- alt va valorizzato SEMPRE e serve per gli utenti con difficoltà visive -->
+    </a>
+    <a href="https://it.wikipedia.org/wiki/Napoli" title="Vai alla pagina wiki Napoli" target="_blank">
+        <!-- path relativo -->
+        <img src="./img/vedutaGolfoDiNapoli.png" alt="Veduta del golfo di Napoli da via Orazio" width="auto" height="200px">
+    </a>
+
+    <br>
+
+    <h2>Utilizzo degli id</h2>
+    <p>Id sta per identificativo, deve perciò essere <b>UNIVOCO</b>. Per richiamare un particolare id nel css utilizzerò #nomeId (es. #primoParag, #secondoParag, ecc.).</p> 
+    <p>Coloriamo i paragrafi assegnando un colore nel css all'id di ogni paragrafo:</p>
+
+    <p id="primoParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime praesentium repellendus mollitia voluptate, earum architecto ipsum, itaque animi porro, necessitatibus officiis ipsam quod soluta? Itaque molestias tempore nostrum. Ullam blanditiis laborum aliquid deleniti a repellendus ad aliquam aspernatur tempore eum consequuntur, alias voluptatum, similique adipisci! Quo saepe eos aliquid tempore.</p>
+
+    <hr>
+
+    <p id="secondoParag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nihil, ad cum in necessitatibus asperiores vero officiis beatae dolores voluptatibus aliquam provident error? Est delectus magni voluptates, architecto vitae nam ex maxime illo ea nemo, minima voluptas quidem aspernatur molestias in eum iure dolor consequuntur mollitia obcaecati a rerum optio!</p>
+
+    <hr>
+
+    <p id="terzoParag">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fugit error veniam in itaque similique unde doloribus necessitatibus doloremque! Aliquam vitae, saepe porro laboriosam autem dolores facilis aliquid repudiandae et! Dolore atque consequatur id animi laborum, accusantium eveniet porro deleniti odio laboriosam, ipsum sequi dignissimos rerum vel odit et a.</p>
+
+    <!-- il file js va collegato PRIMA della chiusura del body utilizzando il tag <script>. 
+    Potrebbe essere collegato anche nella <head> ma a Goodle, Dario e Milo non piace-->
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
