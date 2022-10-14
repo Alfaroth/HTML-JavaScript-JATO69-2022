@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1 id="titolo"></h1>
+    <p id="paragrafo"></p>
+    <p id="altroParagrafo"></p>
+    <p id="ultimoParagrafo"></p>
+
+    <img id="miaImg" src="" alt="">
+
+    <script>
+
+        // l'istruzione non può confondersi perché sa quale titolo è una variabile e quale è un id
+        var titolo = document.getElementById("titolo");
+        titolo.innerHTML = "Titolo della pagina";
+        
+        var paragrafo = document.getElementById("paragrafo");
+        paragrafo.innerHTML = "Questo è il paragrafo della pagina.";
+
+        var altroParagrafo = document.getElementById("altroParagrafo");
+        altroParagrafo.innerHTML = "Questo è l'altro paragrafo della pagina.";
+
+        // posso accorciare l'istruzione concatenandole su una riga
+        document.getElementById("ultimoParagrafo").innerHTML = "Questo è l'ultimo paragrafo della pagina.";
+
+        var miaImg = document.getElementById("miaImg");
+        miaImg.src = "./img/img01.png"   // modifico l'attributo src dell'immagine
+        // miaImg.setAttribute("src", "./img/img01.png");  // altro modo
+
+    </script>
+
+</body>
+
+</html>
