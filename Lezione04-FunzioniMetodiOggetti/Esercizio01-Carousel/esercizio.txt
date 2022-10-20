@@ -1,0 +1,6 @@
+Simulare un carousel
+
+Imposta un'immagine di partenza. Al click sul pulsante l'immagine verrà sostituita con un'altra, fino al fondo dell'array e ritorno.
+Immagini delle stesse dimensioni.
+
+Pulsante moderno e che cambia di aspetto quando ci si passa sopra col cursore.
