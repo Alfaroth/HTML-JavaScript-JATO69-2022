@@ -1,7 +1,113 @@
-.container {
-    width: 1000px;
-    background-color: #cccccc;
+* { /* tutti gli elementi */
+    box-sizing: border-box;
+    /* applico a tutti gli elementi il box-model "border-box" */
+    /* vedi: https://css-tricks.com/the-css-box-model/ 
+           e https://www.w3schools.com/css/css_boxmodel.asp 
+    border-box = padding e border prendono spazio all'interno del contenitore senza farlo ingrandire
+    content-box = padding e border fannno ingrandire il contenitore lasciando il contenuto della stessa dimensione       
+    */
+    
+}
 
+body { /* tutti gli elementi del body */
+    /*
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    posso usare un font-stack di sistema usando i font installati sull'OS */
+
+    font-family: 'Fira Sans', sans-serif;
+}
+
+img { /* tutte le immagini */
+    /* 
+    max-width: 100%;
+    allarga le immagini al massimo fino alla loro risoluzione nativa e 
+    le immagini saranno grandi al massimo quanto il container che la contiene così da non sforare 
+    diverso da */
+    width: 100%;
+    /* allarga l'immagine fino a riempire il contenitore anche oltre la sua risoluzione nativa */
+    
+    height: auto;
+}
+
+h1 {
+    font-weight: 900;
+    /* posso richiamare lo spessore specifico da 100 (thin) a 900 (black)
+
+    Normalmente:
+    300 è thin
+    400 è regular
+    700 è bold
+    900 è bolder
+    */
+
+    font-size: 4rem;
+    /* dimensione font 4 volte più grande del default
+    1rem = 16px
+    */
+}
+
+h2 {
+    font-size: 1.75em; /* 3 volte la font-size del suo contenitore */
+}
+
+.container {
+    width: 70%;
+    background-color: #dcdcdc;
+
+    margin: 0 auto;
+    /* margini esterni per centrare il container orizzontalmente
+    equivale a
     margin-left: auto;
     margin-right: auto;
+    */
+
+    padding: 0 1rem;
+    /* aggiunge margini interni a sinistra e destra tra container e body
+
+    un valore: tutti e 4 i lati uguali 
+    padding: 16px;
+    equivale a
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    due valori: top/bottom left/right
+    padding: 0 16px;
+    equivale a
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    quattro valori: top right bottom left
+    padding 100px 16px 1px 80px;
+    equivale a
+    padding-top: 100px;
+    padding-right: 16px;
+    padding-bottom: 1px;
+    padding-left: 80px;
+    */
 }
+
+.box {
+
+    background-color:#f7b45c;
+    border: 1px solid #eb5c1a;  /* spessore tipo colore */
+    padding: 1rem;
+    
+}
+
+.ingredienti {
+
+    width:30%;
+    float:left;
+
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  
+}
+
+.credits {
+    text-align: center;
+  }

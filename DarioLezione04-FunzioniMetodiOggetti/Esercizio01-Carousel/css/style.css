@@ -1,0 +1,46 @@
+* { 
+    box-sizing: border-box;
+}
+
+img { 
+    max-width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+
+.container {
+    background-color: rgb(255, 255, 196);
+    width: 40%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px solid black;
+    align-content: center;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    color: blue;
+    background-color: yellow;
+    border-radius: 12px;
+    border: 2px solid blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px blue, -1px -1px 1px blue, 0 4px grey;
+}
+
+.button:hover {
+    background-color: blue;
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.button:active {
+    transform: translateY(4px);
+}
+
