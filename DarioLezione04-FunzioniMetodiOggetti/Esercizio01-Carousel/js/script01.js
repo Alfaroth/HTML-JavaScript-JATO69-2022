@@ -12,18 +12,31 @@ var immagini = [
 ];
 
 var elImmagine = document.getElementById("immagine");
-elImmagine.innerHTML = "<img id='immaginePkmn' src='" + immagini[0] + "'>";
 
 var i = 0;
-console.log(i);
+// console.log(i);
+
+function mostraFoto(i) {    // richiamata in <body onload="mostraFoto(0)"> in index.html
+    elImmagine.innerHTML = "<img id='immaginePkmn' src='" + immagini[i] + "'>";
+}
 
 function ruotaFoto() {
     if (i<(immagini.length-1)) {
         elImmagine.innerHTML = "<img id='immaginePkmn' src='" + immagini[++i] + "'>";
-        console.log(i);
+        // console.log(i);
     } else {
         i=0;
-        elImmagine.innerHTML = "<img id='immaginePkmn' src='" + immagini[0] + "'>";
-        console.log(i);
+        elImmagine.innerHTML = "<img id='immaginePkmn' src='" + immagini[i] + "'>";
+        // console.log(i);
     }
 }
+
+/*
+function ruotaFoto() {
+    i++;
+    if (i == immagini.length) {
+        i = 0;
+    }
+    mostraFoto(i);
+}
+*/

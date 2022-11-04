@@ -1,0 +1,74 @@
+Recensione OPPO Find X5 Pro:
+un gioiello di potenza
+
+Saltando la quarta generazione (OPPO dice perché Find N era la quarta, ma noi sappiamo che è per la scaramanzia cinese nei confronti del numero 4) arriva sul mercato OPPO Find X5 Pro, il nuovo smartphone premium dell'azienda per il 2022. E se c'è un'azienda che ha corso veloce in questi anni è sicuramente OPPO. Scopriamolo nella nostra recensione completa.
+
+
+#Confezione#
+
+La confezione di Find X5 Pro è tutto sommato abbastanza ricca. Abbiamo un cavo USB/USB-C, una cover in silicone semi-trasparente e soprattutto un alimentatore da ben 80W (anche abbastanza compatto). Come aggiunta troviamo anche un adattatore USB/USB-C.
+
+#Costruzione ed Ergonomia#
+
+OPPO Find X5 Pro è uno dei primi smartphone in assoluto a venire realizzato nella sola finitura in ceramica. È una soluzione sicuramente coraggiosa ma che noi abbiamo apprezzato. Lo smartphone è da subito risultato estremamente solido e con una finitura pregiata che al tatto si riconosce subito. L'aver poi proseguito con lo stesso design dello scorso anno, migliorandolo, ce lo fa poi apprezzare ancora di più. Il blocco delle fotocamere infatti è sì sporgente ma incastonato in una "collinetta" dalle linee morbide e sinuose e che rispetto allo scorso anno sembra integrarsi meglio con le forme complessive del dispositivo.
+
+Lo smartphone è ancora una volta IP68, quindi resistente ad acqua e polvere, anche se dobbiamo ovviamente constatare come l'utilizzo di un materiale come la ceramica ne abbia fatto aumentare il peso, che arriva ora a 218 grammi. Un bellissimo prodotto, che potrebbe scontentare chi cercava un prodotto più compatto e leggero.
+
+#Hardware#
+
+
+OPPO Find X5 pro integra ovviamente tutto il meglio dell'hardware in circolazione. E non poteva essere diversamente. Abbiamo il processore Snapdragon 8 Gen 1 octa core da 3 GHz, la GPU Adreno 730, 12 GB di RAM LPDDR5, 256 GB di memoria interna UFS 3.1 e la connettività 5G su entrambi gli slot SIM. Non c'è la memoria espandibile ma c'è invece la possibilità di usare una SIM in formato eSIM. Oltre al processore principale abbiamo anche una NPU dedicata alla parte di imaging (ovvero di fotocamera). Si tratta del processore MariSilicon X realizzato da OPPO e presentato lo scorso dicembre.
+
+Ottimo anche il resto della connettività: Wi-Fi 6, Bluetooth 5.2 e chip NFC. Non manca ovviamente la porta USB-C 3.1. Abbiamo poi un nuovo sistema di raffreddamento, con uno strato di grafene a corpire la scheda madre e il sistema di ricarica, una camera di vapore (del 75% più grande) a raffreddare la CPU e la batteria e infine un altro strato di grafene sopra ai componenti del display. Buono anche l'audio stereo, offerto dallo speaker inferiore e dalla capsula auricolare superiore. Non l'audio migliore in assoluto, ma all'altezza di uno smartphone di questo tipo. Abbiamo poi un buon lettore di impronte digitali integrato all'interno del display di tipo ottico. Come nota stonata: manca il foro per il jack audio. Ma è in ottima compagnia.
+
+#Fotocamera#
+
+Il sistema di fotocamera di questo anno è, se guardiamo solo ai numeri, simile a quello dello scorso anno. Due fotocamere da 50 megapixel IMX766. Una ƒ/1.7 e una ƒ/2.2 grandangolare. Il sensore principale è ora stabilizzato su 5 assi (3 sul sensore e 2 sulle lenti) e ora ha delle lenti in vetro. La collaborazione con Hasselblad e il nuovo sensore di spettro colore a 13 canali garantiscono poi una riproduzione dei colori estremamente fedele. Sono parole di OPPO, che però possiamo confermare essere vere dai nostri test. Anche nelle condizioni di luce più difficili sembra che Find X5 Pro riesca a indovinare il bilanciamento dei colori praticamente alla perfezione. E questo vale anche per la grandangolare, che indubbiamente è una delle migliori sulla piazza.
+
+Stupisce poi il lavoro del software e del processore MariSilicon X sulle situazioni con poca luce. La modalità notte è diventata quasi ininfluente. Aggiunge un minimo di dettaglio in più, ma sono dettagli (scusate il gioco di parole) che si notano a malapena dal computer. Scattare in automatico con poca luce vi garantirà comunque scatti ben bilanciati e con un buon numero di dettagli. Anche qui, anche con la grandangolare. Nel complesso una coppia di fotocamere principali che davvero stupisce. Peccato solo per la fotocamera zoom, discreta ma che si ferma a 2x (e a 13 megapixel). Tutto sommato utile, ma uno zoom più spinto sarebbe stato apprezzato. Peccato poi per la scomparsa della fotocamera microscopica. C'è ancora la possibilità di fare foto macro sfruttando in automatico la lente grandangolare. La modalità XPan ereditata (almeno concettualmente) da Hasselblad è simpatica, ma è poco più che un ritaglio molto panoramico di uno scatto normale.
+
+Più che buona la fotocamera frontale da 32 megapixel ƒ/2.4 che guadagna un sensore RGBW. Molto bene anche tutto il comparto che riguarda i video con registrazioni in 4K a 60fps molto nitide, ben bilanciate e molto stabili. Nel complesso è uno dei migliori smartphone per fare video, anche con poca luce, dove si difende egregiamente. Peccato solo per i video dalla videocamera frontale, solo in Full HD e non molto stabili. Anacronistici quasi nel 2022.
+
+#Display#
+
+Anche nel 2022 lo schermo rimane uno dei cavalli di battaglia dello smartphone premium di OPPO. Qui troviamo un ampio 6,7 pollici in tecnologia AMOLED e con risoluzione QHD+ (1440 x 3216 pixel). La schermo ha poi un refresh rate variabile (grazie alla tecnologia LTPO) da 1 a 120 Hz e garantisce un touch sampling record di ben 1.000 Hz. Rimane invariata la luminosità massima di 1.300 nits e troviamo il supporto ai 10 bit e al 100% dello spazio colore DCI-P3. Uno schermo che quindi marca tutte le caselle per un display di alta qualità, sia sulla carta che nella realtà. Se proprio volete trovargli un difetto è nell'essere uno schermo curvo, cosa che a noi (esteticamente) piace ma che non incontra il gusto di tutti.
+
+#Software#
+
+Find X5 Pro arriva sul mercato con Android 12 (patch di gennaio 2022) e personalizzato con la ColorOS 12.1. Questa ultima iterazione del software sembra un po' aver rallentato la folle corsa nello sviluppo di questo "OS", ma ha comunque le sue peculiarità, come l'implementazione dei temi di Android 12 o delle air gesture per scorrere in alcuni menù senza toccare lo schermo. Non mancano poi la modalità gioco, varie opzioni per migliorare la qualità dei video riprodotti, le finestre flottanti, la barra laterale o la possibilità di impsotare l'assistente Google alla pressione del tasto di accensione. Ancora una volta un software molto completo. Speriamo di trovare solo qualche chicca distintiva in più nei prossimi aggiornamenti.
+
+#Autonomia#
+
+OPPO ha poi lavorato anche sulla batteria aumentando la capacità e arrivando a 5.000 mAh. Ottima la gestione energetica di questo smartphone che con un utilizzo intenso vi porta a fine giornata, probabilmente anche grazie ai sistemi di raffreddamento integrati. In più la ricarica aumenta ancora di potenza, abbassando quindi i tempi di ricarica. Parliamo di 80W (da 0 al 100% in 12 minuti) e di 50W in modalità wireless. Supportata la ricarica standard PD al massimo della sua potenza. È presente anche la ricarica wireless inversa.
+
+#Prezzo#
+
+OPPO Find X5 Pro arriva sul mercato a 1.299€. Un prezzo alto, da vero premium. Sebbene le promo di lancio siano spesso solo un "trucco", dobbiamo riconoscere che quella di questo smartphone è veramente ghiotta. Per chi lo ordina entro il 24 aprile in omaggio si riceverà delle cuffie Enco X, un orologio Watch Free, un base wireless di ricarica a 50W e una cover. In più se l'acquisto è fatto dall'OPPO Store si aggiungere anche una masterclass fotografica e la possibilità di fare trade in del vecchio smartphone (con rimborso fino a 750€). Solo fino al 17 marzo, solo su OPPO Store anche 100€ di codice sconto per altri acquisti sullo stesso store entro 12 mesi.
+
+È disponibile su Amazon con altri 6 mesi di garanzia aggiuntiva.
+
+#Giudizio Finale#
+
+OPPO Find X5 Pro è una vera sorpresa, pur facendo parte del segmento premium che già da sé descrive l'eccellenza di questi smartphone. La costruzione in ceramica gli aggiunge poi un tocco di eleganza che lo distingue dai concorrenti. Ottimo display, ottime fotocamere, ricarica fulminea e software molto completo. Non ha veri difetti, se non qualche piccola mancanza. Il limite è il prezzo (ovviamente) alto, ma fate bene ad essere tentati, perché Find X5 Pro è indubbiamente la sorpresa di questi ultimi mesi.
+
+#Sommario#
+
+Confezione 8
+Costruzione ed Ergonomia 9
+Hardware 8.5
+Fotocamera 9
+Display 10
+Software 8.5
+Autonomia 8.5
+Prezzo 6
+
+#Scheda tecnica#
+
+Display 6,7" QHD+ / 1440 x 3216 PX
+Fotocamera 50 MPX ƒ/1.7
+Frontale 32 MPX ƒ/2.2
+CPU octa 3 GHz
+RAM 12 GB
+Memoria Interna 256 GB Espandibile
+Batteria 5000 mAh
+Android 12

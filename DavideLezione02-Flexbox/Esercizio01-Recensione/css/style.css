@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    background-color: rgb(179, 179, 179);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.mainMenu ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.container {
+    width: 75%;
+    background-color: #eeeeee;
+    margin: 0 auto;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.box {
+    background-color:#ffffff;
+    border: 1px solid #303030; 
+    padding: 1rem;
+}
+
+.boxContent {
+    width: 30%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.galleria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galleriaFoto {
+    width: 25%;
+}
+
+.galleriaFoto img {
+    width: 100%;
+}

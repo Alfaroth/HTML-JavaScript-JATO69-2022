@@ -108,6 +108,11 @@ h2 {
   
 }
 
+.specs {
+    width: 30%;
+    float: right;
+}
+
 .credits {
     text-align: center;
   }

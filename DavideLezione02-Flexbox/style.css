@@ -1,0 +1,66 @@
+.mainHeader {
+    background: #999;
+    display: flex;
+   
+    /* proprietà flexbox di default
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch; */
+   
+    justify-content: space-between; /* main axis */
+    align-items: center;            /* cross axis */
+
+    /* flex-direction: row-reverse; */      /* inverte la direzione dell'asse */
+    /* flex-direction: column; */           /* cambia main e cross axis */
+    /* flex-direction: column-reverse; */   /*  inverte la direzione dell'asse */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* va a capo quando finisce lo spazio */
+    /* flex-wrap: nowrap; proprietà default */
+}
+
+.galleryItem {
+    width: 25%;
+}
+
+.galleryItem img {  /* solo le immagini contenute in div galleryItem */
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+
+.logo img {
+    width: 100px;
+}
+
+.mainMenu ul {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;              /* spazio tra tutti gli elementi di ul */
+    /* column-gap: 3rem; */ /* spazio tra le colonne */
+    /* row-gap: 3rem; */    /* spazio tra le righe */
+}
+
+.mainMenu ul li {   /* solo gli elementi li contenuti in ul a loro volta contenuti in mainMenu */
+    /* margin-right: 1rem; */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   SEZIONI                                  */
+/* -------------------------------------------------------------------------- */
+
+#confezione {
+    display: flex;
+}
+
+.sectionImage {
+    width: 30%;
+}
+
+.sectionText {
+    width: 70%;
+}

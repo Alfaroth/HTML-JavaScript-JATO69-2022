@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Anek Telugu', sans-serif;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    background: red;
+    color: #ffffff;
+    padding: 0.5rem 1rem; /* 0.5rem top/bottom 1rem left/right */
+
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.25s;
+}
+
+.button:hover {
+    background: darkred;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                HERO SECTION                                */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    background-image: url("../images/herobg.jpg");
+    background-size: cover; /* adatta l'immagine di sfondo per coprire sempre lo spazio */
+    background-position: center center; /* ridimensiona e adatta partendo dal centro */
+
+    background-repeat: no-repeat; /* evita l'affiancamento dell'immagine */
+
+    height: 100vh; /* viewport height */
+
+    color: #efefef;
+
+    /* centro la call to action */
+    display: flex;
+    justify-content: center; /* centro sul main axis (orizzontale) */
+    align-items: center; /* centro sul cross axis (verticale) */
+}
+
+.callToAction {
+    text-align: center;
+}
+
+.callToAction h1 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                NEWS SECTION                                */
+/* -------------------------------------------------------------------------- */
+
+#news {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.newsBox {
+    display: flex;
+    align-items: center; /* align funziona sull cross axis (verticale) */
+    margin-bottom: 4rem;
+}
+
+.newsImage {
+    width: 40%;
+}
+
+.newsText {
+    width: 60%;
+    padding: 2rem;
+
+    font-size: 1.5rem;
+}
+
+.newsText h2 {
+    font-size: 2.5rem;
+}
+
+/* con la pseudoclasse :nth-of-type() posso agire solo sugli elementi N di quel selettore
+   ad esempio qui seleziono solo gli elementi pari con classe .newsBox */
+
+.newsBox:nth-of-type(even) .newsImage {
+    order: 1;
+}
+
+.newsBox:nth-of-type(even) .newsText {
+    text-align: right;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   SPACER                                   */
+/* -------------------------------------------------------------------------- */
+
+#spacer { /* spacer con effetto pseudo-parallasse */
+    background-image: url("../images/spacer.jpg");
+    height: 30rem;
+
+    background-size: cover;
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed; /* non fa scorrere il background */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               GALLERY SECTION                              */
+/* -------------------------------------------------------------------------- */
+
+#gallery {
+    padding-top: 6rem;
+}
+
+.galleryWrapper {
+    display: flex;
+    flex-wrap: wrap; /* va a capo quando finisce lo spazio */
+}
+
+.galleryItem {
+    width: 25%;
+    padding: 1rem;
+}
+
+.galleryItem img {
+    width:100%;
+}
