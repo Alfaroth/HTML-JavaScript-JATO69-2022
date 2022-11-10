@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Anek Telugu', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    background: #CC2020;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem; /* 0.5rem top/bottom 1rem left/right */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.25s;
+}
+
+.button:hover {
+    background: darkred;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                NEWS SECTION                                */
+/* -------------------------------------------------------------------------- */
+
+.newsBox {
+    display: flex;
+    align-items: center; /* align funziona sull cross axis (verticale) */
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+.newsImage {
+    width: 50%;
+}
+
+.newsImage img {
+    width: 50rem;
+}
+
+.newsTextTop {
+    width: 50%;
+    padding: 2rem;
+
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.newsTextBottom {
+    width: 50%;
+    padding: 2rem;
+
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               GALLERY SECTION                              */
+/* -------------------------------------------------------------------------- */
+
+#gallery {
+    width: 100vw;
+    background-color: #CC2020;
+}
+
+.galleryWrapper {
+    display: flex;
+    flex-wrap: wrap; /* va a capo quando finisce lo spazio */
+    padding: 3rem;
+    justify-content: center;
+}
+
+.galleryItem {
+    width: 30%;
+    padding: 0 4rem;
+    color: white;
+    justify-content: space-between;
+    text-align: center; 
+}
+
+.galleryItem img {
+    width: 10rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             MENU DI NAVIGAZIONE                            */
+/* -------------------------------------------------------------------------- */
+
+.logo img {
+    width: 5rem; /* fornendo una sola dimensione l'altra si calcola in automatico */
+    margin: 1rem;
+}
+
+#mainHeader .container { /* il container dentro mainHeader */
+    display: flex;
+    justify-content: space-between; /* allineamento in orizzontale (main axis) */
+    align-items: center; /* allineamento in verticale (cross axis) */ 
+    font-size: 1.25rem;
+}
+
+.mainNav ul { /* elementi ul dentro mainMav */
+    list-style-type: none; /* toglie i pallini dagli elementi della lista */
+    padding: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.mainNav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 0.5rem 1rem;
+}
+
+.mainNav a:hover {
+    color: #CC2020;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+#mainFooter {
+    background-color: #000000;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+#mainFooter a {
+    color: white;
+}
+
+#mainFooter a:hover {
+    color: #CC2020
+}

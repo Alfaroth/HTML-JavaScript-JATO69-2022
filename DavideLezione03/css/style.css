@@ -144,3 +144,34 @@ img {
 .galleryItem img {
     width:100%;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                             MENU DI NAVIGAZIONE                            */
+/* -------------------------------------------------------------------------- */
+
+.logo img {
+    height: 5rem; /* fornendo una sola dimensione l'altra si calcola in automatico */
+}
+
+#mainHeader .container { /* il container dentro mainHeader */
+    display: flex;
+    justify-content: space-between; /* allineamento in orizzontale (main axis) */
+    align-items: center; /* allineamento in verticale (cross axis) */ 
+}
+
+.mainNav ul { /* elementi ul dentro mainMav */
+    list-style-type: none; /* toglie i pallini dagli elementi della lista */
+    padding: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.mainNav a {
+    text-decoration: none;
+    color: #C01717;
+    padding: 0.5rem 1rem;
+}
+
+.mainNav a:hover {
+    border: 1px solid #C01717;
+}
