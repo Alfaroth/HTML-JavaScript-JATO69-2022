@@ -23,7 +23,7 @@ img {
 .button {
     background: #CC2020;
     color: #ffffff;
-    padding: 0.5rem 1.5rem; /* 0.5rem top/bottom 1rem left/right */
+    padding: 0.5rem 1.5rem; 
     text-decoration: none;
     border-radius: 10px;
     transition: all 0.25s;
@@ -39,7 +39,7 @@ img {
 
 .newsBox {
     display: flex;
-    align-items: center; /* align funziona sull cross axis (verticale) */
+    align-items: center; 
     margin-top: 6rem;
     margin-bottom: 3rem;
 }
@@ -55,7 +55,6 @@ img {
 .newsTextTop {
     width: 50%;
     padding: 2rem;
-
     font-size: 1.5rem;
     text-align: left;
 }
@@ -63,7 +62,6 @@ img {
 .newsTextBottom {
     width: 50%;
     padding: 2rem;
-
     font-size: 1.5rem;
     text-align: right;
 }
@@ -79,7 +77,7 @@ img {
 
 .galleryWrapper {
     display: flex;
-    flex-wrap: wrap; /* va a capo quando finisce lo spazio */
+    flex-wrap: wrap; 
     padding: 3rem;
     justify-content: center;
 }
@@ -101,19 +99,19 @@ img {
 /* -------------------------------------------------------------------------- */
 
 .logo img {
-    width: 5rem; /* fornendo una sola dimensione l'altra si calcola in automatico */
+    width: 5rem; 
     margin: 1rem;
 }
 
-#mainHeader .container { /* il container dentro mainHeader */
+#mainHeader .container { 
     display: flex;
-    justify-content: space-between; /* allineamento in orizzontale (main axis) */
-    align-items: center; /* allineamento in verticale (cross axis) */ 
+    justify-content: space-between; 
+    align-items: center; 
     font-size: 1.25rem;
 }
 
-.mainNav ul { /* elementi ul dentro mainMav */
-    list-style-type: none; /* toglie i pallini dagli elementi della lista */
+.mainNav ul { 
+    list-style-type: none; 
     padding: 0;
     display: flex;
     gap: 2.5rem;
@@ -142,6 +140,7 @@ img {
 
 #mainFooter a {
     color: white;
+    text-decoration: none;
 }
 
 #mainFooter a:hover {
