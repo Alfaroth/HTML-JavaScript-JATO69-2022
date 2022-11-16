@@ -12,7 +12,7 @@ var secondi = oggi.getSeconds();
 
 console.log(anno, mese, data, giorno, ore, minuti, secondi);
 
-var giorniSettimana = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]M
+var giorniSettimana = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
 
 
 /* -------------------------------------------------------------------------- */
