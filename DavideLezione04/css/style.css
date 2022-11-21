@@ -1,0 +1,48 @@
+body {
+    font-family: "Helvetica", Arial, sans-serif;
+}
+
+.box {
+    background: blue;
+    color: white;
+}
+
+/* schermi tra 320px e 380px */
+@media screen and (min-width:320px) and (max-width:380px) {
+    body {
+        background: black;
+    }
+}
+
+/* schermi da 576px in su */
+@media screen and (min-width:576px) {
+    .box { /* sovrascrivo la regola generica */
+        background: green;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .box {
+        background: orangered;
+    } 
+}
+
+@media screen and (min-width:1200px) {
+    .box {
+        background: black;
+    } 
+}
+
+/* schermi tipo portrait */
+@media (orientation: portrait) {
+    body {
+        text-align: center;
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        text-align: right;
+    }
+}
