@@ -26,9 +26,9 @@ var info = document.getElementById("info");
 setInterval( () => {
 
     var now = new Date();
-    var ora = now.getHours();
-    var min = now.getMinutes();
-    var sec = now.getSeconds();
+    var ora = (now.getHours() < 10 ? "0": "") + now.getHours();
+    var min = (now.getMinutes() < 10 ? "0": "") + now.getMinutes();
+    var sec = (now.getSeconds() < 10 ? "0": "") + now.getSeconds();
 
     info.innerHTML = ora + " : " + min + " : " + sec;
     console.log(ora + " : " + min + " : " + sec);

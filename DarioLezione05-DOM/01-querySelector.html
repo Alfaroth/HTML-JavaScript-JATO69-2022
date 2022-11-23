@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    
+
+    <h1>Lista della spesa</h1>
+
+    <ul id="listaSpesa">
+        <li class="txtViola">Frutta</li>
+        <li class="txtViola">Nutella</li>
+        <li class="txtViola">Broccoli</li>
+        <li class="txtViola">Birra e vino</li>
+        <li class="txtViola">Pesce</li>
+        <li class="txtViola">Carne</li>
+    </ul>
+
+    <h2>Lista cose da fare</h2>
+
+    <ul id="listaCoseDaFare">
+        <li>Dentista</li>
+        <li>Cinema</li>
+        <li>Studio</li>
+        <li>Lettura</li>
+    </ul>
+
+    <div id="demo" class="txtViola grassetto">
+        <p>Ciao</p>
+    </div>
+
+    <script>
+
+        // classList individua la lista delle classi
+        /*
+        var listaSpesa = document.getElementById("listaSpesa").children;    // traversing
+        listaSpesa[0].classList.add("grassetto");                           // manipolazione
+
+        console.log(listaSpesa);
+        */
+
+        // querySelector - prende 1 elemento attraverso sintassi css ma recupera SOLO ed esclusivamente la PRIMA occorrenza
+        var listaSpesa = document.querySelector("ul").children; // prende solo la prima lista ul
+        
+        // listaSpesa[0].classList.add("grassetto"); // assegna la classe .grassetto al primo elemento di listaSpesa
+
+        // operatore [...Collection] - trasforma una Collection in un Array
+        [...listaSpesa].forEach(element => {
+            element.classList.add("grassetto"); // assegna la classe .grassetto a tutti gli elementi di listaSpesa
+            element.classList.remove("txtViola"); // tolgo la classe .txtViola a tutti gli elementi di listaSpesa
+        })
+
+        console.log(listaSpesa);
+
+        var li = document.querySelector("li"); // prende solo il primo elemento li
+        console.log(li);
+
+        // querySelectorAll - prende più elementi e produce una NodeList, da trattare come un Array
+        var lis = document.querySelectorAll("li"); // prende tutti gli elementi li
+        console.log(lis);
+
+        var lisTxtViola = document.querySelectorAll("li.txtViola"); // prende tutti gli elementi li con .txtViola
+        console.log(lisTxtViola);
+
+        var liSenzaClass = document.querySelectorAll("ul#listaCoseDaFare li"); // prende tutti gli elementi li in listaCoseDaFare
+        console.log(liSenzaClass);
+
+        // className mette una classe da 0, cancellando tutto il precedente
+        /*
+        for (var i=0; i<liSenzaClass.length; i++) {
+            liSenzaClass[i].className = "txtOrange"; // assegna la classe .txtOrange a tutti gli elementi di liSenzaClass
+        }
+        */
+
+        // con operatore [...Collection]
+        [...liSenzaClass].forEach(element => {
+            element.className = "txtOrange"; // assegna la classe .txtOrange a tutti gli elementi di liSenzaClass
+        })
+
+        console.log(liSenzaClass);
+
+        var demo = document.querySelector("#demo");
+        demo.classList.add("carattereBIG"); // aggiunge la classe .carattereBIG 
+        demo.classList.replace("txtViola", "txtOrange") // rimpiazza la classe .txtViola con la classe .txtOrange
+        demo.classList.remove("grassetto"); // rimuove la classe .grassetto
+        console.log(demo.classList);
+
+        var animali = ["cane", "gatto", "coniglio"];
+        ["mucca", "gallina", "gallo", ...animali].forEach(animale => { // posso concatenare altri elementi ad un array usando ...
+            console.log(animale);
+        })
+
+        var persona = {
+            nome: "Paola",
+            cognome: "Bianchi",
+            eta: 30
+        }
+        // non posso usare l'operatore [...Collection] per gli oggetti siccome sono non iterable quindi uso il for - in
+        // for - in è un for che si applica agli oggetti, per natura NON ITERABLE
+        for (const key in persona) {
+            const element = persona[key];
+            console.log(element);
+        }
+      
+    </script>
+
+</body>
+
+</html>

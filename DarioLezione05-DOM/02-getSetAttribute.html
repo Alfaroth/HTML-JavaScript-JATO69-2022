@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    
+
+    <h1>Lista della spesa</h1>
+
+    <ul id="listaSpesa">
+        <li class="txtViola">Frutta</li>
+        <li class="txtViola">Nutella</li>
+        <li class="txtViola">Broccoli</li>
+        <li class="txtViola">Birra e vino</li>
+        <li class="txtViola">Pesce</li>
+        <li class="txtViola">Carne</li>
+    </ul>
+
+    <h2>Lista cose da fare</h2>
+
+    <ul id="listaCoseDaFare">
+        <li>Dentista</li>
+        <li>Cinema</li>
+        <li>Studio</li>
+        <li>Lettura</li>
+    </ul>
+
+    <div id="demo" class="txtViola grassetto">
+        <p>Ciao</p>
+        <!-- voglio inserire una a href -->
+    </div>
+
+    <button id="btn">Carica lista</button>
+
+    <script>
+
+        // var primoLi = document.querySelector("ul#listaSpesa li.txtViola"); // prima occorrenza
+        var primoLi = document.querySelector("ul#listaSpesa").firstElementChild;
+
+        // hasAttribute() - getAttribute()
+        if (primoLi.hasAttribute("class")) {                // se primoLi ha una classe
+            var attributo = primoLi.getAttribute("class");  // la assegno alla variabile attributo
+            console.log(attributo);
+        }
+
+        // setAttribute()
+        primoLi.setAttribute("id", "primoElemento"); // assegno "primoElemento" all'attributo id di primoLi
+        primoLi.setAttribute("title", "Frutta");     // assegno "Frutta" all'attributo Title di primoLi
+        console.log(primoLi);
+
+        // var p = document.querySelector("#demo p");
+        // var p = document.querySelector("#demo").firstChild;
+        var p = document.querySelector("#demo").children[0];
+        p.setAttribute("class", "carattereBIG"); // assegno la classe .carattereBIG a p
+        console.log(p);
+
+        // creo una a e la inserisco nel div #demo
+        var demo = document.querySelector("#demo");
+
+        const HREF = "http://www.example.org";
+        const LINK = "Pagina di Esempio";
+
+        var a = document.createElement("a");
+        a.setAttribute("href", HREF); // <a href = "www.example.org"></a>
+
+        // var testo = document.createTextNode(LINK);
+        // a.appendChild(testo); // <a href = "www.example.org">Pagina di esempio</a>
+
+        a.textContent = LINK;
+        a.innerHTML = "<i>" + LINK + "</i";
+
+        demo.appendChild(a);
+
+        // Provo con un array di oggetti
+        var collegamenti = [
+            {
+                href: 'http://www.example.org',
+                link: 'Pagina di prova'
+            },
+            {
+                href: 'http://www.example.org',
+                link: 'Pagina di test'
+            },
+            {
+                href: 'http://www.example.org',
+                link: 'Pagina Automatica'
+            }
+        ];
+
+
+        function caricaLista() {
+
+            for (var i=0; i<collegamenti.length; i++) {
+
+                if (collegamenti[i].link != "Pagina Automatica") {
+
+                    var a = document.createElement("a");
+                    a.setAttribute("href", collegamenti[i].href);
+                    a.innerHTML = collegamenti[i].link + "<br>";
+                    demo.appendChild(a); 
+
+                } else {
+
+                    var a = document.createElement("a");
+                    a.setAttribute("href", collegamenti[i].href);
+                    a.innerHTML = collegamenti[i].link + "<br>";
+                    a.setAttribute("class", "txtOrange");
+                    demo.appendChild(a);
+
+                }
+
+            }
+
+        }
+
+        var btn = document.querySelector("#btn")
+        document.addEventListener("click", caricaLista, false);
+
+    </script>
+
+</body>
+
+</html>

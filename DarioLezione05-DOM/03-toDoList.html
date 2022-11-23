@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <h1>To-Do List</h1>
+    <p>Inserisci qualcosa da fare</p>
+
+    <input type="text" placeholder="Inserisci qualcosa" id="campoInput">
+
+    <button id="btn">Inserisci</button>
+
+    <div>
+        <ul id="demo"></ul>
+    </div>
+    
+
+    <script>
+
+        var demo = document.querySelector('#demo');
+        var btn = document.querySelector('#btn');
+
+        function aggiungiCosa(){
+
+            var toDo = document.querySelector('#campoInput').value;
+            //prima di oggi avrei fatto così:  demo.innerHTML += '<li>' + toDo + '</li>';
+
+            //oggi faccio così
+            var li = document.createElement('li');
+            li.textContent = toDo;
+
+            li.onclick = function(){
+                li.setAttribute('class', 'txtBarrato');
+            }
+
+            //crea un pulsante e al click rimuovi l'elemento applicando la classe fadeOutLeft di animate.css
+            //alla fine, trasformate la X in un cestino utilizzando www.fontawesome.com
+
+            demo.appendChild(li);
+
+        }
+
+        btn.addEventListener('click', aggiungiCosa, false);   
+
+    </script>
+
+</body>
+
+</html>
