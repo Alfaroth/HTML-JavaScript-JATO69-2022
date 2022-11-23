@@ -1,5 +1,8 @@
-* {
+* { /* tutti gli elementi */
     box-sizing: border-box;
+    /* applico a TUTTI gli elementi il box-model "border-box" */
+    /* vedi: https://css-tricks.com/the-css-box-model/ 
+    e https://www.w3schools.com/css/css_boxmodel.asp */
 }
 
 body {
@@ -12,8 +15,8 @@ h1 {
 }
 
 .container {
-    width: 70%;
-    margin: 0 auto;
+    width:70%;
+    margin:0 auto;
 }
 
 img {
@@ -22,97 +25,108 @@ img {
 }
 
 .button {
-    background: red;
-    color: #ffffff;
-    padding: 0.5rem 1rem; /* 0.5rem top/bottom 1rem left/right */
+    background:#c01717;
+    color:#ffffff;
+    /*primo valore: top/bottom | secondo valore: left/right*/
+    padding: 0.5rem 1.5rem; 
 
-    text-decoration: none;
-    border-radius: 6px;
+    text-decoration:none;
+    border-radius:6px;
     transition: all 0.25s;
 }
 
 .button:hover {
-    background: darkred;
+    background: #6c0c0c;
 }
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                HERO SECTION                                */
 /* -------------------------------------------------------------------------- */
 
 #hero {
-    background-image: url("../images/herobg.jpg");
-    background-size: cover; /* adatta l'immagine di sfondo per coprire sempre lo spazio */
-    background-position: center center; /* ridimensiona e adatta partendo dal centro */
+    background-image: url('../images/rental-hero.jpg');
+    background-size: cover; /*adatta l'immagine di sfondo per coprire sempre lo spazio*/
+    background-position: center center; /*ridimensiona e adatta partendo dal centro */
 
-    background-repeat: no-repeat; /* evita l'affiancamento dell'immagine */
+    background-repeat: no-repeat; /*evita l'affiancamento dell'immagine*/
 
-    height: 100vh; /* viewport height */
+    height:100vh; /*viewport height, unità di misura relativa all'ALTEZZA del viewport*/
 
-    color: #efefef;
+    color:#efefef;
 
-    /* centro la call to action */
+    /*centro la call to action*/
+
     display: flex;
-    justify-content: center; /* centro sul main axis (orizzontale) */
-    align-items: center; /* centro sul cross axis (verticale) */
+    justify-content: center; /*centro sul main axis (orizzontale)*/
+    align-items: center; /*centro sul cross axis (verticale)*/
+
 }
 
 .callToAction {
-    text-align: center;
+    text-align:center;
 }
 
 .callToAction h1 {
-    text-transform: uppercase;
+    text-transform:uppercase; /*tutto maiuscolo*/
     margin-bottom: 0;
-
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                NEWS SECTION                                */
+/*                                SEZIONE NEWS                                */
 /* -------------------------------------------------------------------------- */
 
 #news {
     padding-top: 6rem;
     padding-bottom: 6rem;
+
 }
 
 .newsBox {
     display: flex;
-    align-items: center; /* align funziona sull cross axis (verticale) */
-    margin-bottom: 4rem;
+    align-items: center; /*align funziona sull cross-axis (asse Y)*/
+    margin-bottom:4rem;
 }
 
 .newsImage {
-    width: 40%;
+    width:40%;
 }
 
 .newsText {
-    width: 60%;
-    padding: 2rem;
+    width:60%;
+    padding:2rem;
 
     font-size: 1.5rem;
+
 }
 
 .newsText h2 {
     font-size: 2.5rem;
+
 }
 
-/* con la pseudoclasse :nth-of-type() posso agire solo sugli elementi N di quel selettore
-   ad esempio qui seleziono solo gli elementi pari con classe .newsBox */
+
+
+/*con la pseudoclasse :nth-of-type() posso agire solo sugli elementi N di quel selettore. 
+Ad esempio qui seleziono solo gli elementi PARI con classe .newsBox */
 
 .newsBox:nth-of-type(even) .newsImage {
-    order: 1;
+    order:1;
 }
 
 .newsBox:nth-of-type(even) .newsText {
     text-align: right;
 }
 
+
 /* -------------------------------------------------------------------------- */
 /*                                   SPACER                                   */
 /* -------------------------------------------------------------------------- */
 
-#spacer { /* spacer con effetto pseudo-parallasse */
-    background-image: url("../images/spacer.jpg");
+#spacer {
+    /*spacer con effetto pseudo-parallasse*/
+    background-image: url('../images/spacer.jpg');
     height: 30rem;
 
     background-size: cover;
@@ -120,25 +134,27 @@ img {
 
     background-repeat: no-repeat;
 
-    background-attachment: fixed; /* non fa scorrere il background */
+    /*questo blocca il background: non scorre più*/
+    background-attachment: fixed;
+
 }
 
 /* -------------------------------------------------------------------------- */
-/*                               GALLERY SECTION                              */
+/*                               SEZIONE GALLERY                              */
 /* -------------------------------------------------------------------------- */
 
 #gallery {
-    padding-top: 6rem;
+padding-top:6rem;
 }
 
 .galleryWrapper {
     display: flex;
-    flex-wrap: wrap; /* va a capo quando finisce lo spazio */
+    flex-wrap: wrap; /*vai a capo quando lo spazio finisce!*/
 }
 
 .galleryItem {
     width: 25%;
-    padding: 1rem;
+    padding:1rem;   
 }
 
 .galleryItem img {
@@ -150,28 +166,52 @@ img {
 /* -------------------------------------------------------------------------- */
 
 .logo img {
-    height: 5rem; /* fornendo una sola dimensione l'altra si calcola in automatico */
+    height:5rem;
+    /* se fornisco una dimensione sola l'altra si calcola in automatico*/
 }
 
-#mainHeader .container { /* il container dentro mainHeader */
+
+#mainHeader .container {
+
+    /* il .container dentro #mainHeader */
+
     display: flex;
-    justify-content: space-between; /* allineamento in orizzontale (main axis) */
-    align-items: center; /* allineamento in verticale (cross axis) */ 
+
+    justify-content: space-between; /*allineamento in orizzontale (main axis)*/
+    align-items: center; /*allineamento in verticale (cross axis) */
+
+
 }
 
-.mainNav ul { /* elementi ul dentro mainMav */
-    list-style-type: none; /* toglie i pallini dagli elementi della lista */
-    padding: 0;
+.mainNav ul {
+    
+    /* l'elemento UL dentro .mainNav */
+
+    list-style-type: none;
+
+    padding:0;
     display: flex;
-    gap: 2.5rem;
+    
+    gap:2.5rem;
+    
 }
 
 .mainNav a {
+
     text-decoration: none;
     color: #C01717;
-    padding: 0.5rem 1rem;
+
+    padding:0.5rem 1rem;
+
 }
 
 .mainNav a:hover {
-    border: 1px solid #C01717;
+    border:1px solid #C01717;
 }
+
+
+
+.box:nth-of-type(odd) {
+    background: red;
+}
+

@@ -1,7 +1,15 @@
+/* definisco le regole generali e 
+trasversali a tutte le media queries */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #efefef;
-    color: #222;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background:#efefef;
+    color:#222;
 }
 
 h1 {
@@ -12,7 +20,7 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #444;
+    color:#444;
 }
 
 img {
@@ -20,6 +28,150 @@ img {
     height: auto;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+#mainHeader {
+    position: fixed; /*SEMPRE fisso, indipendente dallo scroll*/
+    top:0;
+    left:0;
+
+    z-index:1;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    width:100%;
+    /*position fa stringere gli elementi!*/
+    /*devo ridargli la larghezza 100%*/
+
+    background:rgba(255,255,255,0.5);
+   /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
+}
+
+.menuWrapper {
+    display: flex; /*affianco logo e menu*/
+    justify-content: space-between; /*sposto ai lati*/
+    align-items: center; /*allineo in verticale*/
+}
+
+.mainMenu ul {
+    list-style-type: none;
+    padding: 0;
+
+    display: flex; /*affianco i <li> */
+    column-gap: 1rem; /*creo uno spazio tra gli <li>*/
+}
+
+/* #hero {
+    background-image: url('../img/hero_mobile.jpg');
+   
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height:100vh;
+} */
+
+#hero {
+    /*serve ad attivare il position:absolute di .cta */
+    position: relative;
+}
+
+#hero .cta {
+    position: absolute; /*posiziona in base a coordinate*/
+
+    /*assegno le coordinate*/
+    left:0;
+    bottom:0;
+
+    width:100%;
+   
+    background:#ffffff66; /*trasparenza in esadecimale*/
+    /* l'ultima coppia di valore è la trasparenza*/
+}
+
+/* CONTAINER */
+
+.container {
+    width:95%;
+    margin:0 auto;
+}
+
+.sImage img {
+    width:100%; /*allarga l'immagine a tutto schermo per mobile*/
+}
+
 .galleryWrapper {
     display: flex;
+    flex-wrap:wrap;
+
+}
+
+.galleryImg {
+    width:50%;
+    padding:0.5rem;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                         SCHERMI PIU GRANDI DI 768PX                        */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:768px) {
+
+    /* #hero {
+        background-image: url('../img/hero_tablet.jpg');
+    } */
+
+    .container {
+        width:90%;
+        /*il margine l'ho già dichiarato prima */
+
+    }
+    .servizio {
+        display: flex;
+    }
+
+    .sImage {
+        width:33.33%;
+        padding-right:2rem;
+    }
+
+    .sText {
+        width:66.66%
+    }
+
+    .galleryImg {
+        width: 33%;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                         SCHERMI PIU GRANDI DI 992PX                        */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:992px) {
+
+    /* #hero {
+        background-image: url('../img/hero_desktop.jpg');
+    } */
+    
+    .container {
+        width:80%;
+    }
+    /*GALLERY*/
+    .galleryImg {
+        width:25%;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        width:70%;
+    }
 }
