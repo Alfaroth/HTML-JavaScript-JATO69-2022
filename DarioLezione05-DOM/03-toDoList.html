@@ -31,22 +31,35 @@
 
         function aggiungiCosa(){
 
-            var toDo = document.querySelector('#campoInput').value;
-            //prima di oggi avrei fatto così:  demo.innerHTML += '<li>' + toDo + '</li>';
+            // demo.innerHTML += '<li>' + toDo + '</li>';
 
-            //oggi faccio così
+            var toDo = document.querySelector('#campoInput').value;
+
             var li = document.createElement('li');
             li.textContent = toDo;
 
             li.onclick = function(){
-                li.setAttribute('class', 'txtBarrato');
+            //li.firstElementChild.setAttribute('class', 'txtBarrato');
+            li.firstElementChild.classList.toggle('txtBarrato'); //toogle fa da interruttore sulla classe
             }
 
-            //crea un pulsante e al click rimuovi l'elemento applicando la classe fadeOutLeft di animate.css
-            //alla fine, trasformate la X in un cestino utilizzando www.fontawesome.com
+            // creare il pulsante per eliminare
+
+            var elimNode = document.createElement('span');
+            elimNode.innerHTML = " X ";
+
+            elimNode.onclick = function() { // elimina tutto li
+                li.setAttribute('class', 'animate__animated animate__fadeOutLeft');
+                
+                //dopo due secondi esegue questa 
+                setTimeout(() => {
+                    demo.removeChild(li);}, 500);
+
+            }
+
+            li.appendChild(elimNode);
 
             demo.appendChild(li);
-
         }
 
         btn.addEventListener('click', aggiungiCosa, false);   
