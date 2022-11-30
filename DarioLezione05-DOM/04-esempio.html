@@ -24,8 +24,8 @@
         <h2 id="titolo" class="display-6"><a href="" id="wiki" class="text-decoration-none"></a></h2>
             
         <div class="row align-items-center">
-            <!-- <div class="col"><button id="prev" class="btn btn-primary disabled">Indietro</button></div> -->
-            <div class="col"><button id="prev" class="btn btn-primary">Indietro</button></div>
+            <div class="col"><button id="prev" class="btn btn-primary disabled">Indietro</button></div>
+            <!-- <div class="col"><button id="prev" class="btn btn-primary">Indietro</button></div> -->
             <div class="col"><img id="locandina" class="imgDim" src="" alt=""></div>
             <div class="col"><button id="next" class="btn btn-primary">Avanti</button></div>
         </div>       
@@ -126,12 +126,12 @@
        
         // disabilita tasto Indietro se a inizio lista
         function prevMovie() {
-            next.setAttribute("class", "btn btn-primary")
-            if (contatore == 1) {
-                prev.setAttribute("class", "btn btn-primary disabled")
-            }
+            next.classList.remove("disabled");
             contatore--;
             mostraFilm(contatore);
+            if (contatore == 0) {
+                prev.classList.add("disabled");
+            }
         }
         
         /*
@@ -148,12 +148,12 @@
         
         // disabilita tasto Avanti se a fine lista
         function nextMovie() {
-            prev.setAttribute("class", "btn btn-primary")
-            if (contatore == films.length-2) {
-                next.setAttribute("class", "btn btn-primary disabled")
-            }
+            prev.classList.remove("disabled");
             contatore++;
             mostraFilm(contatore);
+            if (contatore == films.length-1) {
+                next.classList.add("disabled");
+            }
         }
        
         btnPrev.addEventListener("click", prevMovie);
