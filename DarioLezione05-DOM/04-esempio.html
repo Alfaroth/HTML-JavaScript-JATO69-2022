@@ -15,24 +15,20 @@
 
 </head>
 
-<body>
+<body class="bg-dark text-bg-dark">
 
     <div class="container text-center">
 
-        <h1 class="display-1">Cinema Superstar</h1>
+        <h1 class="display-3">Cinema Superstar</h1>
        
-        <h2 id="titolo" class="display-6"><a href="" id="wiki" class="text-decoration-none"></a></h2>
+        <h2 id="titolo" class="display-5"><a href="" id="wiki" class="text-decoration-none" target="_blank"></a></h2>
             
         <div class="row align-items-center">
-            <div class="col"><button id="prev" class="btn btn-primary disabled">Indietro</button></div>
+            <div class="col"><button id="prev" class="btn btn-primary btn-lg disabled">Indietro</button></div>
             <!-- <div class="col"><button id="prev" class="btn btn-primary">Indietro</button></div> -->
-            <div class="col"><img id="locandina" class="imgDim" src="" alt=""></div>
-            <div class="col"><button id="next" class="btn btn-primary">Avanti</button></div>
+            <div class="col p-3"><img id="locandina" class="imgDim" src="" alt=""></div>
+            <div class="col"><button id="next" class="btn btn-primary btn-lg">Avanti</button></div>
         </div>       
-
-        <figure>
-            <img id="locandina" class="imgDim" src="" alt="">
-        </figure>
 
         <ul id="attori" class="list-inline"></ul>
         <p id="durata"></p>
@@ -90,10 +86,12 @@
 
             attori.innerHTML = "";
             films[index].attori.forEach(attore => {
-                attori.innerHTML += "<li class=\"list-inline-item\"><a href=\"https://it.wikipedia.org/wiki/" + creaWiki(attore) + "\">" + attore + "</a></li>";
+                attori.innerHTML += "<li class=\"list-inline-item\"><a href=\"https://it.wikipedia.org/wiki/" + creaWiki(attore) + "\" target=\"_blank\" >" + attore + "</a></li>";
             });
 
-            genere.innerHTML = "";
+            durata.innerHTML = "Durata del film: " + films[index].durata + " min";
+
+            genere.innerHTML = "Genere: ";
             films[index].genere.forEach(genereFilm => {
                 genere.innerHTML += "<li>" + genereFilm + "</li>";
             });
