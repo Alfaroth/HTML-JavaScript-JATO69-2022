@@ -1,0 +1,13 @@
+{
+    "utenti": [
+        { "id": 1, "nome": "Dario", "tipologia": "superuser"},
+        { "id": 2, "nome": "Milo", "tipologia": "superuser"},
+        {"id": 3, "nome": "Mauro", "tipologia": "superuser"}
+    ],
+    "studenti": [
+        { "id": 1, "nome": "Abel", "tipologia": "studente"},
+        { "id": 2, "nome": "Valentina", "tipologia": "studente"},
+        { "id": 3, "nome": "Clarissa", "tipologia": "studente"}
+    ],
+    "creator": {"nome": "Dario", "cognome": "Mennillo", "ruolo": "docente"}
+}    

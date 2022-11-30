@@ -20,14 +20,12 @@
     <div class="container text-center">
 
         <h1 class="display-1">Cinema Superstar</h1>
-
-
-        <a href="" id="wiki">
-            <h2 id="titolo" class="display-6"></h2>
-        </a>
+       
+        <h2 id="titolo" class="display-6"><a href="" id="wiki" class="text-decoration-none"></a></h2>
             
         <div class="row align-items-center">
-            <div class="col"><button id="prev" class="btn btn-primary disabled">Indietro</button></div>
+            <!-- <div class="col"><button id="prev" class="btn btn-primary disabled">Indietro</button></div> -->
+            <div class="col"><button id="prev" class="btn btn-primary">Indietro</button></div>
             <div class="col"><img id="locandina" class="imgDim" src="" alt=""></div>
             <div class="col"><button id="next" class="btn btn-primary">Avanti</button></div>
         </div>       
@@ -37,16 +35,13 @@
         </figure>
 
         <ul id="attori" class="list-inline"></ul>
-
         <p id="durata"></p>
         <p id="anno"></p>
-        <p id="genere"></p>
+        <ul id="genere" class="list-unstyled text-capitalize"></p>
 
     </div>
 
     <script>
-
-        
 
         var films = [
             {
@@ -61,7 +56,7 @@
                 titolo: "Tre uomini e una gamba",
                 durata: 98,
                 anno: 1997,
-                locandina: "https://m.media-amazon.com/images/I/71g7bXFYMZL._SL1000_.jpg",
+                locandina: "https://m.media-amazon.com/images/I/71Iq4IF29iL._SL1024_.jpg",
                 genere: ["commedia"],
                 attori: ["Aldo Baglio", "Giovanni Storti", "Giacomino Poretti"]
             },
@@ -84,7 +79,7 @@
 
         function mostraFilm(index) {
 
-            titolo.textContent = films[index].titolo;
+            wiki.textContent = films[index].titolo;
 
             wiki.setAttribute("href", "https://it.wikipedia.org/wiki/" + creaWiki(films[index].titolo));
 
@@ -93,19 +88,21 @@
 
             anno.textContent = "Anno prima uscita: " + films[index].anno;
 
-            /*attori.innerHTML = "";
+            attori.innerHTML = "";
             films[index].attori.forEach(attore => {
-                attori.innerHTML += "<a href=\"https://it.wikipedia.org/wiki/" + creaWiki(attore) + "\"><li>" + attore + "</li></a>";
-            });*/
-            films[index].attori.forEach(attore => {
-                attori.innerHTML += "<a href=''" + creaWiki(attore) + "\"><li class=\"list-inline-item\">" + attore + "</li></a>";
+                attori.innerHTML += "<li class=\"list-inline-item\"><a href=\"https://it.wikipedia.org/wiki/" + creaWiki(attore) + "\">" + attore + "</a></li>";
             });
 
             genere.innerHTML = "";
             films[index].genere.forEach(genereFilm => {
-                genere.innerHTML += genereFilm + " ";
+                genere.innerHTML += "<li>" + genereFilm + "</li>";
             });
 
+        }
+
+        function creaWiki(titolo) {
+            var t = titolo.split(' ').join('_');
+            return t;
         }
 
         var contatore = 0;
@@ -116,21 +113,18 @@
         var btnNext = document.querySelector("#next");
         
         /*
+        // salta a fine lista se mando indietro dal primo film
         function prevMovie() {
-            next.setAttribute("class", "btn btn-primary")
             if (contatore > 0) {
-                if (contatore == 1) {
-                    prev.setAttribute("class", "btn btn-primary disabled")
-                }
                 contatore--;
-                mostraFilm(contatore);
             } else {
-                contatore == films.length - 1;
-                mostraFilm(contatore);
+                contatore = films.length-1;
             }
+            mostraFilm(contatore);
         }
         */
-
+       
+        // disabilita tasto Indietro se a inizio lista
         function prevMovie() {
             next.setAttribute("class", "btn btn-primary")
             if (contatore == 1) {
@@ -139,49 +133,48 @@
             contatore--;
             mostraFilm(contatore);
         }
-
+        
         /*
+        // ritorna a inizio lista se mando avanti dall'ultimo film
         function nextMovie() {
-            prev.setAttribute("class", "btn btn-primary")
-            if (contatore < (films.length)-1) {
-                if (contatore == (films.length)-2) {
-                    next.setAttribute("class", "btn btn-primary disabled")
-                }
+            if (contatore < films.length-1) {
                 contatore++;
-                mostraFilm(contatore);
             } else {
                 contatore = 0;
-                mostraFilm(contatore);
             }
+            mostraFilm(contatore);
         }
         */
-
+        
+        // disabilita tasto Avanti se a fine lista
         function nextMovie() {
             prev.setAttribute("class", "btn btn-primary")
-            if (contatore == (films.length)-2) {
+            if (contatore == films.length-2) {
                 next.setAttribute("class", "btn btn-primary disabled")
             }
             contatore++;
             mostraFilm(contatore);
         }
-
+       
         btnPrev.addEventListener("click", prevMovie);
         btnNext.addEventListener("click", nextMovie);
 
-        /**
-         * - Creare i link titolo del film alla pagina wikipedia
-         * - Creare i link agli attori alle singole pagine di ciscun attore
-         * - Gestire la rotazione delle locandine
-         * - Non modificare l'array di film
-         * - Utilizzare classi bootstrap per migliorarne l'aspetto
-         * - Centrare nella pagina tutte le informazioni
-         * - I pulsanti avanti e indietro devono essere messi a destra e sinistra della locandina
-        **/
+        // JSON - JavaScript Object Notation
+        // stringify() trasforma un oggetto JS in una stringa
+        var mieiFilmJSON = JSON.stringify(films);
+        console.log(mieiFilmJSON);
 
-        function creaWiki(titolo) {
-            var t = titolo.split(' ').join('_');
-            return t;
-        }
+        // dalle API riceveremo sempre e solo stringhe
+        var mioObjJSON = '[{"titolo":"Il buono, il brutto e il cattivo","durata":120,"anno":1967,"locandina":"https://movieplayer.net-cdn.it/t/images/2014/06/12/buonobruttocattivo_jpg_400x0_crop_q85.jpg","genere":["western","drammatico"],"attori":["Clint Eastwood","Lee van Cleef","Gian Maria Volontè"]},{"titolo":"Tre uomini e una gamba","durata":100,"anno":1997,"locandina":"https://m.media-amazon.com/images/I/71g7bXFYMZL._SL1000_.jpg","genere":["commedia"],"attori":["Aldo Baglio","Giovanni Storti","Giacomino Poretti"]},{"titolo":"Matrix","durata":180,"anno":1999,"locandina":"https://www.warnerbros.it/wp-content/uploads/2015/09/Matrix_Poster.jpg","genere":["Scifi","drammatico"],"attori":["Keanu Reeves","Carrie-Ann Moss","Laurence Fishbourne","Hugo Weaving"]}]';
+
+        console.log(mioObjJSON[0].anno); // undefined perché un oggetto JSON non formattato è solo una stringa
+
+        // per trasformare la stringa in un object che posso manipolare con JS
+        // JSON.parse() trasforma una stringa in oggetto JS
+        var mioObj = JSON.parse(mioObjJSON);
+
+        console.log(mioObj);
+        console.log(mioObj[0].titolo);
 
     </script>
 

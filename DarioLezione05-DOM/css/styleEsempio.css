@@ -2,3 +2,13 @@
     height: 500px;
     width: auto;
 }
+
+html body {
+    background-color: bisque;
+}
+
+.container {
+    background-color:rgb(255, 250, 244);
+    padding: 1rem;
+    margin: 1rem auto;
+}
