@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-dark fw-semibold">
+   
+  <nav class="navbar navbar-expand-lg navbar-dark mt-2 pb-5">
+      <div class="container-lg">
+          <a href="#">
+              <svg height="48" width="95.04">
+                    <image xlink:href="img/logo.svg" src="img/logo.png" class="logo" />
+              </svg>
+              <!-- <img class="logo" src="./img/logo.svg" alt=""> -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end bg-dark text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Novità</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Chi siamo</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Negozio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Carrello</a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <i class="bi bi-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <i class="bi bi-instagram"></i>                        
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <i class="bi bi-twitter"></i>
+                        </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav> <!-- fine navbar -->
+
+  <div class="container text-bg-dark">
+
+    <div class="row mt-5">
+      <div class="col-lg-8 pe-lg-4 col-12">
+        <div class="d-flex justify-content-between mb-5">
+          <h2>Il tuo carrello</h2>
+          <p class="text-muted">3 items</p>
+        </div>
+
+        <hr>
+
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-2 col-12">
+            <img class="img-fluid rounded" src="./img/strokes.jpg" alt="">
+          </div>
+          <div class="col-lg-4 col-6">
+            <p class="cartTxt text-muted">Vinile</p>
+            <p class="cartTxt">The New Abnormal</p>
+          </div>
+          <div class="col-lg-3 col-6 d-flex align-items-center">
+            <a href="" style="text-decoration: none"> - </a>
+            <input id="cartAmount" type="text" class="form-control" value="1" style="border-radius: 5px">
+            <a href="" style="text-decoration: none"> + </a>
+          </div>
+          <div class="col-lg-3 col-12">€ 20.00</div>
+        </div>
+
+        <hr>
+
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-2 col-12">
+            <img class="img-fluid rounded" src="./img/alicia.jpg" alt="">
+          </div>
+          <div class="col-lg-4 col-6">
+            <p class="cartTxt text-muted">Vinile</p>
+            <p class="cartTxt">Alicia</p>
+          </div>
+          <div class="col-lg-3 col-6 d-flex align-items-center">
+            <a href="" style="text-decoration: none"> - </a>
+            <input id="cartAmount" type="text" class="form-control" value="1" style="border-radius: 5px">
+            <a href="" style="text-decoration: none"> + </a>
+          </div>
+          <div class="col-lg-3 col-12">€ 20.00</div>
+        </div>
+
+        <hr>
+
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-2 col-12">
+            <img class="img-fluid rounded" src="./img/radiohead.jpg" alt="">
+          </div>
+          <div class="col-lg-4 col-6">
+            <p class="cartTxt text-muted">CD Audio</p>
+            <p class="cartTxt">OK Computer</p>
+          </div>
+          <div class="col-lg-3 col-6 d-flex align-items-center">
+            <a href="" style="text-decoration: none"> - </a>
+            <input id="cartAmount" type="text" class="form-control" value="1" style="border-radius: 5px">
+            <a href="" style="text-decoration: none"> + </a>
+          </div>
+          <div class="col-lg-3 col-12">€ 20.00</div>
+        </div>
+
+        <hr>
+
+      </div>
+
+      <div class="col-lg-4 col-12 ps-lg-4 pe-lg-5">
+
+        <h3 class="mb-5">Riepilogo ordine</h3>
+
+        <hr>
+        
+        <div class="d-flex justify-content-between mb-4">
+          <div class="d-flex">
+            <p>OGGETTI:</p>
+            <p id="orderAmount" class="bg-primary">3</p>
+          </div>
+            <p>€ 132.00</p>
+        </div>
+
+        <p>SPEDIZIONE</p>
+
+        <div class="input-group mb-3">
+          <select class="form-select">
+            <option value="1">Spedizione standard - 5€</option>
+            <option value="2">Opzione 2</option>
+            <option value="3">Opzione 3</option>
+          </select>
+        </div>
+
+        <p>CODICE SCONTO</p>
+
+        <div class="mb-5">
+          <input type="text" class="form-control">
+          <div>Inserisci codice</div>
+        </div>
+
+        <hr>
+
+        <div class="d-flex justify-content-between mb-5">
+          <p>TOTALE</p>
+          <p>€ 137.00</p>
+        </div>
+
+        <button type="button" class="btn btn-primary">Acquista</button>
+
+      </div>
+
+    </div>
+
+  </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

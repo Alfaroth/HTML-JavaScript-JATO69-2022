@@ -1,0 +1,27 @@
+.logo {
+    height: 3rem;
+    width: auto;
+}
+
+.cartTxt {
+    margin-bottom: 0;
+}
+
+#orderAmount {
+    border-radius: 5px;
+    padding-left: .5rem;
+    padding-right:.5rem;
+    margin-left: .5rem;
+}
+
+#cartAmount {
+    margin: 0 .5rem;
+}
+
+@media screen and (min-width:992px) { /* large */
+
+    #cartAmount {
+        width: 3rem;
+    } 
+
+}
