@@ -1,0 +1,62 @@
+@import "variables";
+@import "fonts";
+
+body {
+    background: $bodyBg;
+    color:$mainColor;
+}
+
+.mainMenu { // posso nidificare le regole di css
+
+    ul {
+
+        list-style-type: none;
+        display: flex;
+        column-gap: 1rem;
+
+        a {
+            color:$linkColor;
+
+            &:hover { // a:hover
+                
+                // color: complement($linkColor);       // colore complementare
+                // color: desaturate($linkColor, 20%);  // colore desaturato del 20%
+                // color: lighten($linkColor,20%);      // schiarisce del 20%
+                color: darken($linkColor,20%);          // scurisce del 20%
+                
+            }
+
+            &.active { // se <a> ha anche classe .active
+                color: complement($linkColor);
+            }
+
+        }
+      
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    height: 100vh;
+    background-image: url('../herobg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroText {
+
+    background-color: transparentize($black,0.75);
+
+    p {
+        @extend h1; // extend prende le caratteristiche di un selettore e le replica 
+    }
+
+}

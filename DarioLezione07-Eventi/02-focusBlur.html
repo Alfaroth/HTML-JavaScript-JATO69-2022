@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Benvenuto</h1>
+    <h2>Compila il form</h2>
+
+    <form action="http://www.example.org" id="mioForm" method="get">
+        Username: <input type="text" id="username"><br>
+        Codice Fiscale: <input type="text" id="codFis"><br>
+        Password: <input type="text" id="password"><br>
+        <input type="submit" value="Registrati">
+    </form>
+    
+    <div id="feed"></div>
+
+    <script>
+
+        //eventi focus-blur
+        var feed = document.querySelector('#feed');
+        var username = document.querySelector('#username');
+        var codFis = document.querySelector('#codFis');
+        var password = document.querySelector('#password');
+        var mioForm = document.querySelector('#mioForm');
+
+        // regex; 6 lettere, 2 numeri, 1 lettera, 2 numeri, 1 lettera, 3 numeri, 1 lettera
+        const FORMATO_CF = /^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]*$/i;
+        
+        // regex pass: minimo 8 caratteri, almeno una minuscola, almeno una maiiuscola, almeno un numero, almeno un carattere speciale @$!%*?&
+        const FORMATO_PW = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        function suggerisciUser() { // esce il suggerimento quando facciamo click sul username
+            feed.removeAttribute("class");
+            feed.innerHTML = "Lo username deve essere di almeno 5 caratteri"
+        }
+
+        function controllaUser() {
+            var lungUser = username.value.length;
+            if(lungUser < 5){
+                feed.innerHTML = "Il tuo Username è troppo corto";
+                feed.setAttribute("class", "txtRed");
+                event.preventDefault();
+            }else{
+                feed.innerHTML = "";
+            }
+        }
+
+        function coloraBordo() {
+            var lungUser = username.value.length;
+            if(lungUser < 5){
+                if(username.hasAttribute("class")){
+                    username.classList.remove("bordoGreen");
+                }
+                    username.setAttribute("class", "bordoRed");
+            }else{
+                if(username.hasAttribute("class")){
+                    username.classList.remove("bordoRed")
+                }
+                    username.setAttribute("class","bordoGreen");
+            }
+            console.log(event)
+        }
+
+        function controllaPassword() {
+            if(!password.value.match(FORMATO_PW)){
+                feed.innerHTML += "La tua password non rispetta il formato <br>";
+                event.preventDefault();
+            }
+        }
+        
+        function controllaCodFisc(){
+            if(!codFis.value.match(FORMATO_CF)){
+                feed.innerHTML += "Il tuo codice fiscale non è valido <br>";
+                event.preventDefault();
+            }
+        }
+
+        function validate(){
+            feed.innerHTML = "";
+            controllaUser();
+            controllaCodFisc();
+            controllaPassword();
+        }
+
+        username.addEventListener("focus", suggerisciUser);     // quando si fa focus su username parte il suggerimento
+        username.addEventListener("blur", controllaUser);       // quando si deseleziona l'username parte controllaUser
+        username.addEventListener("keyup", coloraBordo);        // colora il bordo della casella username
+
+        mioForm.addEventListener("submit", validate);
+
+    </script>
+
+</body>
+
+</html>

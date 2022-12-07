@@ -1,0 +1,21 @@
+.dimDiv {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    transition: all .5s;
+}
+
+.coloreDiv{
+    background-color: darkcyan ;
+}
+
+.txtRed{
+    color: red;
+}
+
+.bordoRed{
+    border: 5px solid red;
+}
+.bordoGreen{
+    border: 5px solid greenyellow
+}

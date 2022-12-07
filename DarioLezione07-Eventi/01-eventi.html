@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <button id="btn">Saluta</button>
+    <br>
+    <div id="mioDiv" class="dimDiv"></div>
+
+    <script>
+
+        function miaFunzione(utente) {
+            console.log(event);
+            console.log("Ciao " + utente);
+        }
+
+        function altraFunzione() {
+            console.log("Sei col mouse sul pulsante.");
+        }
+
+        function cambiaColore() {
+            mioDiv.classList.add("coloreDiv");
+        }
+
+        function togliColore() {
+            mioDiv.classList.remove("coloreDiv");
+        }
+
+        var btn = document.querySelector("#btn");
+        // btn.onclick = miaFunzione;
+
+        // Event Listener
+        btn.addEventListener("click", function() { // se non ho il terzo parametro è false di default
+        // per poter passare un parametro ad una funzione richiamata da event listener devo per forza creare una funzione anonima
+            // faccio altre operazioni, poi ...
+            var nomeUtente = "Dario";
+            miaFunzione(nomeUtente);
+        }); 
+        btn.addEventListener("mouseenter", altraFunzione); // muovendo il cursore sul pulsante
+
+        var mioDiv = document.querySelector("#mioDiv")
+        mioDiv.addEventListener("mouseenter", cambiaColore); // muovendo il cursore sul div
+        mioDiv.addEventListener("mouseleave", togliColore); // muovendo il cursore fuori dal div
+
+        // Giochino: con l'evento mousemove cambia bolore al movimento del mouse
+
+    </script>
+
+</body>
+
+</html>

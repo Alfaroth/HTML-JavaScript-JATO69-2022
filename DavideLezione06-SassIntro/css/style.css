@@ -1,0 +1,66 @@
+/* line 1, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/_fonts.scss */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* line 5, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/_fonts.scss */
+h1, .heroText p {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/* line 10, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/_fonts.scss */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* line 4, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+body {
+  background: #222;
+  color: #efefef;
+}
+
+/* line 11, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+.mainMenu ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1rem;
+}
+
+/* line 17, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+.mainMenu ul a {
+  color: #ff00f7;
+}
+
+/* line 20, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+.mainMenu ul a:hover {
+  color: #990094;
+}
+
+/* line 30, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+.mainMenu ul a.active {
+  color: #00ff08;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+/* line 45, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+#hero {
+  height: 100vh;
+  background-image: url("../herobg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 56, ../../JAVASCRIPT_Generation/DavideLezione06-SassIntro/scss/style.scss */
+.heroText {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*# sourceMappingURL=style.css.map */

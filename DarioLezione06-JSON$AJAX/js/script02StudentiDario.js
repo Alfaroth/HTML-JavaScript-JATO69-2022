@@ -1,5 +1,7 @@
 var URLStudenti = "http://localhost:3000/studenti";
+
 var elencoStudenti = document.querySelector('#listaStudenti');
+
 var mioElenco = [];
 
 function mostraStudenti(listaStudenti){
@@ -7,28 +9,45 @@ function mostraStudenti(listaStudenti){
         var id = studente.id;
         var nome = studente.nome;
         var tipo = studente.tipologia;
-        elencoStudenti.innerHTML += '<li><button onclick="cancellaStudente(' + id + ')">x</button> Studente: ' + id + " " + nome + " " + tipo + "</li>";
+
+        mioElenco.push(studente);
+
+        var li = document.createElement('li');
+        li.textContent = "Id: " + id + " " + nome + " tipologia: " + tipo;
+
+        var btnElim = document.createElement('button');
+        btnElim.textContent = "X";
+        
+        btnElim.addEventListener('click', function(){
+            var urlDelete = "http://localhost:3000/studenti/" + id;
+            
+            fetch(urlDelete,{
+                method: "DELETE"
+            })
+            .then(data => {
+                console.log("Studente Eliminato");
+                data.json()
+            })
+        });
+
+        li.appendChild(btnElim);
+
+        elencoStudenti.appendChild(li);
     });
 }
 
 //fetch con metodo POST
-function aggiungiNuovoStudente(event) {
+function aggiungiNuovoStudente() {
 
     var nome = document.querySelector('#nome').value;
     var tipologia = document.querySelector('#tipologia').value;
     
-    
+    var nuovoStudente = {
+        nome: nome,
+        tipologia: tipologia
+    };
 
-    if(nome == "" || tipologia == -1) {
-        event.preventDefault(); // non fare nulla
-    } else {
-
-        var nuovoStudente = {
-            nome: nome,
-            tipologia: tipologia
-        };
-
-        fetch(URLStudenti, {
+    fetch(URLStudenti, {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'
@@ -39,40 +58,31 @@ function aggiungiNuovoStudente(event) {
             data.json()
         })
         .then(response =>{
+
             console.log("Ok, registrazione avvenuta");
-        })
-        
-    }
-}
+        }
+        )
 
-function cancellaStudente(id) {
-
-    var URLDel = "http://localhost:3000/studenti/" + id;
-
-    fetch(URLDel, {
-        method: "DELETE",
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: null
-    })
-    
+        return false;
 }
 
 var form = document.querySelector('#formRegistrazione');
-form.addEventListener("submit", aggiungiNuovoStudente);
+form.addEventListener('submit', aggiungiNuovoStudente);
 
 // var btn = document.querySelector('#btn');
 // btn.addEventListener('click', aggiungiNuovoStudente);
 
 fetch(URLStudenti)
     .then(data => {
-        return data.json()
+        console.log(data.status);
+        return data.json();
     })
     .then(response => {
+
         console.log(response);
         mostraStudenti(response);
     });
+
 
 //successivamente all'aggiunta voglio poter eliminare lo studente al click su un pulsante accanto il singolo studente
 //endpoint DELETE http://localhost:3000/studenti/idStudente

@@ -22,7 +22,14 @@
 
     <form action="http://localhost:5500/DarioLezione06-JSON$AJAX/02-fetch.html" method="post" id="formRegistrazione">
         Nome: <input type="text" id="nome" name="nome"><br>
-        Tipologia: <input type="text" id="tipologia" name="tipologia"><br>
+        Tipologia: <!-- <input type="text" id="tipologia" name="tipologia"><br> -->
+        <select class="form-select" id="tipologia">
+            <option value="-1" disabled selected>Studente</option>
+            <option value="Corsista">Corsista</option>
+            <option value="Apprendista">Apprendista</option>
+            <option value="Assunto">Assunto</option>
+        </select>
+    
         <input type="submit" id="btn" value="Aggiungi nuovo studente">    
     </form>
 

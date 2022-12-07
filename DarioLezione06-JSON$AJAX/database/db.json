@@ -23,11 +23,6 @@
       "id": 2
     },
     {
-      "nome": "Anna",
-      "tipologia": "studente",
-      "id": 4
-    },
-    {
       "nome": "Pippo",
       "tipologia": "studente",
       "id": 5
@@ -41,6 +36,11 @@
       "nome": "Gennarino",
       "tipologia": "studente",
       "id": 7
+    },
+    {
+      "nome": "Anna",
+      "tipologia": "Corsista",
+      "id": 8
     }
   ],
   "creator": {
