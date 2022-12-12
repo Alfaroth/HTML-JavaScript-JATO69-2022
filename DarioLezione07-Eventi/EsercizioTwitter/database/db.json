@@ -1,0 +1,28 @@
+{
+  "tweet": [
+    {
+      "username": "Davide",
+      "tweet": "test #1",
+      "orarioTweet": "19:42:57",
+      "id": 1
+    },
+    {
+      "username": "Davide",
+      "tweet": "test #2",
+      "orarioTweet": "19:43:22",
+      "id": 2
+    },
+    {
+      "username": "Davide",
+      "tweet": "test #3",
+      "orarioTweet": "19:45:28",
+      "id": 3
+    },
+    {
+      "username": "Davide",
+      "tweet": "test luuuuuuuuuuuuuuuuuuuuuuungo #4",
+      "orarioTweet": "19:48:39",
+      "id": 4
+    }
+  ]
+}

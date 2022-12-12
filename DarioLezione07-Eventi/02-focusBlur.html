@@ -16,10 +16,20 @@
     <h1>Benvenuto</h1>
     <h2>Compila il form</h2>
 
-    <form action="http://www.example.org" id="mioForm" method="get">
+    <form action="http://www.example.org" id="mioForm" method="post">
         Username: <input type="text" id="username"><br>
         Codice Fiscale: <input type="text" id="codFis"><br>
         Password: <input type="text" id="password"><br>
+        Nazionalità:
+        <select name="nazionalita" id="nazionalita">
+            <option value="-1" disabled selected>Scegli...</option>
+            <option value="ITA">Italiana</option>
+            <option value="US">Statunitense</option>
+            <option value="FR">Francese</option>
+            <option value="UK">Britannica</option>
+            <option value="ESP">Spagnola</option>
+        </select>
+        <br>
         <input type="submit" value="Registrati">
     </form>
     
@@ -27,12 +37,14 @@
 
     <script>
 
-        //eventi focus-blur
         var feed = document.querySelector('#feed');
         var username = document.querySelector('#username');
         var codFis = document.querySelector('#codFis');
         var password = document.querySelector('#password');
         var mioForm = document.querySelector('#mioForm');
+        var nazionalita = document.querySelector('#nazionalita');
+
+        var msgAlert = ""
 
         // regex; 6 lettere, 2 numeri, 1 lettera, 2 numeri, 1 lettera, 3 numeri, 1 lettera
         const FORMATO_CF = /^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]*$/i;
@@ -42,62 +54,131 @@
 
         function suggerisciUser() { // esce il suggerimento quando facciamo click sul username
             feed.removeAttribute("class");
-            feed.innerHTML = "Lo username deve essere di almeno 5 caratteri"
+            feed.innerHTML = "Lo username deve essere di almeno 5 caratteri <br>"
         }
 
         function controllaUser() {
             var lungUser = username.value.length;
-            if(lungUser < 5){
-                feed.innerHTML = "Il tuo Username è troppo corto";
+            if (lungUser < 5) {
+                feed.innerHTML = "Il tuo Username è troppo corto <br>";
                 feed.setAttribute("class", "txtRed");
                 event.preventDefault();
-            }else{
+                return false;
+            } else {
                 feed.innerHTML = "";
+                return true;
             }
         }
 
         function coloraBordo() {
             var lungUser = username.value.length;
-            if(lungUser < 5){
-                if(username.hasAttribute("class")){
+            if (lungUser < 5) {
+                if (username.hasAttribute("class")) {
                     username.classList.remove("bordoGreen");
                 }
-                    username.setAttribute("class", "bordoRed");
-            }else{
-                if(username.hasAttribute("class")){
+                username.setAttribute("class", "bordoRed");
+            } else {
+                if (username.hasAttribute("class")) {
                     username.classList.remove("bordoRed")
                 }
-                    username.setAttribute("class","bordoGreen");
+                username.setAttribute("class", "bordoGreen");
             }
-            console.log(event)
+            console.log(event);
         }
 
         function controllaPassword() {
-            if(!password.value.match(FORMATO_PW)){
+            if (!password.value.match(FORMATO_PW)) {
                 feed.innerHTML += "La tua password non rispetta il formato <br>";
                 event.preventDefault();
+                return false;
+            } else {
+                return true;
             }
         }
         
-        function controllaCodFisc(){
-            if(!codFis.value.match(FORMATO_CF)){
+        function controllaCodFisc() {
+            if (!codFis.value.match(FORMATO_CF)) {
                 feed.innerHTML += "Il tuo codice fiscale non è valido <br>";
                 event.preventDefault();
+                return false;
+            } else {
+                return true;
             }
         }
 
-        function validate(){
+        function controllaNazionalita() {
+            if (nazionalita.value == -1) {
+                feed.innerHTML += "Non hai scelto la tua nazionalità <br>";
+                event.preventDefault();
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function leggiNazionalita() {
+            var nazionalitaUser = nazionalita.value;
+            feed.innerHTML = "Hai scelto come nazionalità: " + nazionalitaUser;
+        }
+
+        function validate() {
             feed.innerHTML = "";
             controllaUser();
             controllaCodFisc();
             controllaPassword();
+            controllaNazionalita();
         }
 
-        username.addEventListener("focus", suggerisciUser);     // quando si fa focus su username parte il suggerimento
-        username.addEventListener("blur", controllaUser);       // quando si deseleziona l'username parte controllaUser
-        username.addEventListener("keyup", coloraBordo);        // colora il bordo della casella username
+        username.addEventListener("focus", suggerisciUser);         // quando si fa focus su username parte il suggerimento
+        username.addEventListener("blur", controllaUser);           // quando si deseleziona l'username parte controllaUser
+        username.addEventListener("keyup", coloraBordo);            // colora il bordo della casella username
 
-        mioForm.addEventListener("submit", validate);
+        nazionalita.addEventListener("change", leggiNazionalita);   // ogni volta che cambia il valore mostra "Hai scelto nazionalità ..."
+
+        mioForm.addEventListener('submit', registraUser);           // registra l'utente alla conferma del form
+        mioForm.addEventListener("submit", validate);               // esegue tutti i controlli sui vari campi alla conferma del form
+
+        // CRUD - Create Read Update Delete
+
+        // Voglio registrare il mio utente
+        function Utente(username, codFis, password, nazionalita) {
+            this.username = username;
+            this.codFis = codFis;
+            this.password = password;
+            this.nazionalita = nazionalita;
+        } 
+
+        function registraUser() {
+
+            const USER_URL = "http://localhost:3000/utenti";
+            var user = new Utente(username.value, codFis.value, password.value, nazionalita.value);
+
+            if (controllaUser() && controllaPassword() && controllaCodFisc() && controllaNazionalita()) {
+
+                fetch(USER_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(user)
+                })
+                .then(data => {
+                    data.json()
+                    console.log(data);
+                    if (data.status == 404) {
+                        feed.innerHTML = "Registrazione non avvenuta, riprovare più tardi"
+                    }
+                    if (data.status == 201) {
+                        console.log("Registrazione avvenuta con successo");
+                    }
+                })
+                .then(response => {
+                    console.log("Utente, registrato");
+                })
+
+            }
+            
+        }
 
     </script>
 
