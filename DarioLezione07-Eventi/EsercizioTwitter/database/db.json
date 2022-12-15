@@ -1,28 +1,46 @@
 {
-  "tweet": [
+  "user": [
     {
       "username": "Davide",
-      "tweet": "test #1",
-      "orarioTweet": "19:42:57",
+      "password": "asdASD123!",
+      "citta": "Torino",
+      "avatar": "https://pbs.twimg.com/profile_images/1143032401108578305/8IYSjofV_400x400.jpg",
+      "tweets": [
+        {
+          "tweet": "test1",
+          "orarioTweet": "23:46:28"
+        },
+        {
+          "tweet": "test2",
+          "orarioTweet": "23:46:30"
+        },
+        {
+          "tweet": "test3",
+          "orarioTweet": "23:46:34"
+        }
+      ],
       "id": 1
     },
     {
       "username": "Davide",
-      "tweet": "test #2",
-      "orarioTweet": "19:43:22",
+      "password": "asdASD123!",
+      "citta": "Torino",
+      "avatar": "https://pbs.twimg.com/profile_images/1143032401108578305/8IYSjofV_400x400.jpg",
+      "tweets": [
+        {
+          "tweet": "test123",
+          "orarioTweet": "00:11:40"
+        },
+        {
+          "tweet": "test321",
+          "orarioTweet": "00:11:42"
+        },
+        {
+          "tweet": "tttttttttttttteeeeeeeeeeeeeeeesssssssssssssssstttt",
+          "orarioTweet": "00:11:49"
+        }
+      ],
       "id": 2
-    },
-    {
-      "username": "Davide",
-      "tweet": "test #3",
-      "orarioTweet": "19:45:28",
-      "id": 3
-    },
-    {
-      "username": "Davide",
-      "tweet": "test luuuuuuuuuuuuuuuuuuuuuuungo #4",
-      "orarioTweet": "19:48:39",
-      "id": 4
     }
   ]
 }

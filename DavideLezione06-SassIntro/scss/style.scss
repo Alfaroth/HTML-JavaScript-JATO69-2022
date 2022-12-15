@@ -1,9 +1,15 @@
+@import "normalize";
 @import "variables";
 @import "fonts";
+@import "mixins";
 
 body {
-    background: $bodyBg;
-    color:$mainColor;
+
+    // background: $bodyBg;
+    // color:$mainColor;
+
+    @include myGradient(#ffcc00,#222); // include serve per incorporare il mixin    
+
 }
 
 .mainMenu { // posso nidificare le regole di css
@@ -15,6 +21,9 @@ body {
         column-gap: 1rem;
 
         a {
+
+            // @include myButton(#484eff, #ffffff, false);
+
             color:$linkColor;
 
             &:hover { // a:hover
@@ -52,11 +61,13 @@ body {
 }
 
 .heroText {
-
     background-color: transparentize($black,0.75);
 
     p {
         @extend h1; // extend prende le caratteristiche di un selettore e le replica 
     }
+}
 
+.ctaButton {
+    @include myButton(#ff8342, #000000, true);
 }

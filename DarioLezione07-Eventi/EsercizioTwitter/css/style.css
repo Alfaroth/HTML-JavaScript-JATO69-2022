@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 #twitterLogo {
     color: #1DA0F2
 }
@@ -30,23 +31,48 @@ label {
 }
 
 .btn-primary {
-    padding: .7rem 2rem;
-    border-radius: 2rem;
+    border-radius: 32px;
+    font-weight: 700;
     background-color: #1DA0F2;
     border-color: #1DA0F2;
-    display: block;
 }
 
-#feed {
+.btn-logout {
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+.avatar {
+    height: 2rem;
+    border: 2px solid #296b94;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+#currentUser {
+    color: #0e78b9;
+    font-weight:500;
+}
+
+/* label per visualizzazione errori nei dati */
+#tweetCheck, #userCheck, #passCheck, #cittaCheck {
     color: red;
     font-weight:500;
 }
 
+/* sezione che visualizza l'ultimo tweet inviato */
 #prevTweet {
     display: flex;
     align-items: center;
-    height: 5rem;
     background-color: #FFFFFF;
     font-weight: 500;
-    color: #657786;
+    color: #0e78b9;
+    border: 1px solid #EFEFEF;
+    padding: 1rem;
+}
+
+/* mappa Leaflet */
+#map { 
+    height: 200px; 
 }
